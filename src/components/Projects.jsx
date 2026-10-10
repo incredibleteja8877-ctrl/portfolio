@@ -30,6 +30,11 @@ const projects = [
     ],
     link: 'https://github.com/incredibleteja8877-ctrl/taskflow',
     linkLabel: 'View on GitHub',
+    badge: {
+      src: 'https://github.com/incredibleteja8877-ctrl/taskflow/actions/workflows/ci.yml/badge.svg',
+      link: 'https://github.com/incredibleteja8877-ctrl/taskflow/actions',
+      alt: 'Analyze and Test status',
+    },
   },
   {
     name: 'SSD Yogashala & Kalakshetra',

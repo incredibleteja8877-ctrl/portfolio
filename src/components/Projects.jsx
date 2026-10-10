@@ -2,6 +2,21 @@ import SectionHeading from './SectionHeading'
 
 const projects = [
   {
+    name: 'Maega',
+    tag: 'Flutter · Mobile App · Professional',
+    stack: ['Flutter', 'Dart', 'Firebase Auth', 'Cloud Firestore', 'Provider'],
+    description:
+      'A Flutter service-marketplace app for on-demand technicians, built professionally at Quantum Works with a real Firebase backend. I built the UI directly from Figma designs, including animations, and integrated Firebase Authentication and Cloud Firestore for real-time data sync.',
+    highlights: [
+      'Real Firebase Authentication and Cloud Firestore backend',
+      'UI built directly from Figma designs, including animations',
+      'Job-tracking workflow with status tabs and an earnings dashboard',
+      'Reactive state management with Provider, persisted theming',
+    ],
+    link: 'https://github.com/incredibleteja8877-ctrl/maega',
+    linkLabel: 'View on GitHub',
+  },
+  {
     name: 'TaskFlow',
     tag: 'Flutter · Mobile App',
     stack: ['Flutter', 'Dart', 'Clean Architecture', 'Unit + Integration Tests'],

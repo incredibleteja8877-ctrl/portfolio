@@ -46,6 +46,11 @@ const projects = [
     linkLabel: 'View Live Site',
     secondaryLink: 'https://github.com/incredibleteja8877-ctrl/Freelance',
     secondaryLabel: 'View Code',
+    badge: {
+      src: 'https://github.com/incredibleteja8877-ctrl/Freelance/actions/workflows/deploy.yml/badge.svg',
+      link: 'https://github.com/incredibleteja8877-ctrl/Freelance/actions',
+      alt: 'Build, Test, and Deploy status',
+    },
   },
 ]
 
@@ -56,7 +61,14 @@ function Projects() {
       <div className="projects-list">
         {projects.map((project) => (
           <div className="project-card" key={project.name}>
-            <p className="project-tag">{project.tag}</p>
+            <div className="project-tag-row">
+              <p className="project-tag">{project.tag}</p>
+              {project.badge && (
+                <a href={project.badge.link} target="_blank" rel="noopener noreferrer" className="ci-badge">
+                  <img src={project.badge.src} alt={project.badge.alt} />
+                </a>
+              )}
+            </div>
             <h3>{project.name}</h3>
             <p className="project-description">{project.description}</p>
             <ul className="project-highlights">

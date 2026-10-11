@@ -21,6 +21,11 @@ const projects = [
       { src: '/screenshots/maega-signup.jpg', alt: 'Maega create account screen' },
       { src: '/screenshots/maega-jobs.jpg', alt: 'Maega active jobs screen with status tabs and booking details' },
       { src: '/screenshots/maega-earnings.jpg', alt: 'Maega earnings and wallet dashboard with weekly analytics' },
+      { src: '/screenshots/maega-profile.jpg', alt: 'Maega profile screen' },
+      { src: '/screenshots/maega-address.jpg', alt: 'Maega add new address screen' },
+      { src: '/screenshots/maega-payment.jpg', alt: 'Maega payment methods screen' },
+      { src: '/screenshots/maega-language.jpg', alt: 'Maega language selection screen' },
+      { src: '/screenshots/maega-delete.jpg', alt: 'Maega delete account confirmation dialog' },
     ],
   },
   {

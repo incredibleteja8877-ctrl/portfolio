@@ -296,6 +296,20 @@
   object-position: top;
 }
 
+.project-screenshots.phone-screens {
+  background: var(--bg-alt);
+  justify-content: center;
+  gap: 14px;
+  padding-top: 18px;
+}
+
+.project-screenshots.phone-screens img {
+  width: auto;
+  height: 280px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
 .project-tag-row {
   display: flex;
   align-items: center;
@@ -501,6 +515,15 @@
 
   .project-screenshots img {
     height: 160px;
+  }
+
+  .project-screenshots.phone-screens {
+    margin: 0 0 18px;
+    padding: 14px 0 0;
+  }
+
+  .project-screenshots.phone-screens img {
+    height: 200px;
   }
 
   .section h2 {

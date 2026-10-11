@@ -16,7 +16,7 @@ const projects = [
     link: 'https://github.com/incredibleteja8877-ctrl/maega',
     linkLabel: 'View on GitHub',
     screenshots: [
-      { src: '/screenshots/maega-login.jpg', alt: 'Maega login screen, built from Figma design' },
+      { src: '/screenshots/maega-banner.jpg', alt: 'Maega logo' },
     ],
   },
   {

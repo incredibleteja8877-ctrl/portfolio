@@ -18,7 +18,12 @@ function Hero() {
       </div>
       <p className="hero-eyebrow hero-anim" style={{ '--d': '0s' }}>Hyderabad, India</p>
       <h1>
-        <BurnReveal>Vissakodeti Sai Teja</BurnReveal>
+        <BurnReveal>
+          <span className="fire-text">
+            Vissakodeti Sai Teja
+            <span className="fire-text-cracks" aria-hidden="true">Vissakodeti Sai Teja</span>
+          </span>
+        </BurnReveal>
       </h1>
       <p className="hero-role hero-anim" style={{ '--d': '0.16s' }}>
         Flutter Mobile Developer &amp; Freelance React Web Developer

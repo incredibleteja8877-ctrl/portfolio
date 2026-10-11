@@ -17,6 +17,8 @@ const projects = [
     linkLabel: 'View on GitHub',
     screenshotStyle: 'phone',
     screenshots: [
+      { src: '/screenshots/maega-login.jpg', alt: 'Maega login screen' },
+      { src: '/screenshots/maega-signup.jpg', alt: 'Maega create account screen' },
       { src: '/screenshots/maega-jobs.jpg', alt: 'Maega active jobs screen with status tabs and booking details' },
       { src: '/screenshots/maega-earnings.jpg', alt: 'Maega earnings and wallet dashboard with weekly analytics' },
     ],

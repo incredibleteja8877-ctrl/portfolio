@@ -299,8 +299,9 @@
 .project-screenshots.phone-screens {
   background: var(--bg-alt);
   justify-content: center;
+  flex-wrap: wrap;
   gap: 14px;
-  padding-top: 18px;
+  padding: 18px 10px 4px;
 }
 
 .project-screenshots.phone-screens img {
@@ -519,11 +520,11 @@
 
   .project-screenshots.phone-screens {
     margin: 0 0 18px;
-    padding: 14px 0 0;
+    padding: 14px 10px 4px;
   }
 
   .project-screenshots.phone-screens img {
-    height: 200px;
+    height: 180px;
   }
 
   .section h2 {

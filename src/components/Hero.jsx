@@ -1,3 +1,7 @@
+import { Suspense, lazy } from 'react'
+
+const TechOrbit3D = lazy(() => import('./TechOrbit3D'))
+
 function Hero() {
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -5,15 +9,22 @@ function Hero() {
 
   return (
     <header className="hero">
-      <img src="/profile-photo.jpg" alt="Vissakodeti Sai Teja" className="hero-avatar" />
-      <p className="hero-eyebrow">Hyderabad, India</p>
-      <h1>Vissakodeti Sai Teja</h1>
-      <p className="hero-role">Flutter Mobile Developer &amp; Freelance React Web Developer</p>
-      <p className="hero-summary">
+      <div className="hero-avatar-stage">
+        <Suspense fallback={null}>
+          <TechOrbit3D />
+        </Suspense>
+        <img src="/profile-photo.jpg" alt="Vissakodeti Sai Teja" className="hero-avatar" />
+      </div>
+      <p className="hero-eyebrow hero-anim" style={{ '--d': '0s' }}>Hyderabad, India</p>
+      <h1 className="hero-anim" style={{ '--d': '0.08s' }}>Vissakodeti Sai Teja</h1>
+      <p className="hero-role hero-anim" style={{ '--d': '0.16s' }}>
+        Flutter Mobile Developer &amp; Freelance React Web Developer
+      </p>
+      <p className="hero-summary hero-anim" style={{ '--d': '0.24s' }}>
         I build mobile apps with Flutter — clean architecture, full test coverage,
         offline handling — and freelance web apps with React, Firebase, and CI/CD.
       </p>
-      <div className="hero-actions">
+      <div className="hero-actions hero-anim" style={{ '--d': '0.32s' }}>
         <button className="btn-primary" onClick={() => scrollTo('projects')}>
           View Projects
         </button>

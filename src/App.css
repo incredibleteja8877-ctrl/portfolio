@@ -26,6 +26,10 @@
   letter-spacing: -0.2px;
 }
 
+.navbar-brand-accent {
+  color: var(--accent-light);
+}
+
 .navbar-links {
   list-style: none;
   display: flex;

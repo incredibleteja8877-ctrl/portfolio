@@ -36,7 +36,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <span className="navbar-brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-        Sai Teja
+        Sai <span className="navbar-brand-accent">Teja</span>
       </span>
 
       <button

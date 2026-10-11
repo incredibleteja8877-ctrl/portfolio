@@ -160,6 +160,18 @@
   color: #fff;
 }
 
+.burn-reveal {
+  position: relative;
+  display: inline-block;
+}
+
+.burn-reveal-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
 .hero-role {
   font-size: 18px;
   font-weight: 500;

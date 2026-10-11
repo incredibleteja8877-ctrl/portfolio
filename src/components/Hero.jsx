@@ -1,4 +1,5 @@
 import { Suspense, lazy } from 'react'
+import BurnReveal from './BurnReveal'
 
 const TechOrbit3D = lazy(() => import('./TechOrbit3D'))
 
@@ -16,7 +17,9 @@ function Hero() {
         <img src="/profile-photo.jpg" alt="Vissakodeti Sai Teja" className="hero-avatar" />
       </div>
       <p className="hero-eyebrow hero-anim" style={{ '--d': '0s' }}>Hyderabad, India</p>
-      <h1 className="hero-anim" style={{ '--d': '0.08s' }}>Vissakodeti Sai Teja</h1>
+      <h1>
+        <BurnReveal>Vissakodeti Sai Teja</BurnReveal>
+      </h1>
       <p className="hero-role hero-anim" style={{ '--d': '0.16s' }}>
         Flutter Mobile Developer &amp; Freelance React Web Developer
       </p>

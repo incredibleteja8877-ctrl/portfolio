@@ -3,14 +3,20 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Float, RoundedBox, Text } from '@react-three/drei'
 
 // Real brand colors, not arbitrary — each chip reads as the actual stack.
+// Each chip's back label is a recruiter-scanned keyword backed by real
+// project work, not a generic filler skill:
+//   Flutter  -> Clean Arch   (TaskFlow's three-layer architecture)
+//   React    -> CI/CD        (Yogashala's GitHub Actions pipeline)
+//   Firebase -> Security     (Firestore security rules on Maega/Yogashala)
+//   Dart     -> State Mgmt   (Provider, used in Maega)
 const CHIPS = [
-  { label: 'FLUTTER', color: '#02569B', position: [-2.3, 1.15, -0.4], rotationSpeed: 0.4 },
-  { label: 'REACT', color: '#149ECA', position: [2.3, 1.3, 0.1], rotationSpeed: -0.3 },
-  { label: 'FIREBASE', color: '#DD8B1A', position: [-2.4, -1.2, -0.1], rotationSpeed: 0.35 },
-  { label: 'DART', color: '#0175C2', position: [2.2, -1.3, -0.5], rotationSpeed: -0.45 },
+  { label: 'FLUTTER', backLabel: 'CLEAN ARCH', color: '#02569B', position: [-2.3, 1.15, -0.4], rotationSpeed: 0.4 },
+  { label: 'REACT', backLabel: 'CI/CD', color: '#149ECA', position: [2.3, 1.3, 0.1], rotationSpeed: -0.3 },
+  { label: 'FIREBASE', backLabel: 'SECURITY', color: '#DD8B1A', position: [-2.4, -1.2, -0.1], rotationSpeed: 0.35 },
+  { label: 'DART', backLabel: 'STATE MGMT', color: '#0175C2', position: [2.2, -1.3, -0.5], rotationSpeed: -0.45 },
 ]
 
-function Chip({ label, color, position, rotationSpeed, floatSpeed }) {
+function Chip({ label, backLabel, color, position, rotationSpeed, floatSpeed }) {
   const mesh = useRef(null)
 
   useFrame((_, delta) => {
@@ -33,6 +39,21 @@ function Chip({ label, color, position, rotationSpeed, floatSpeed }) {
           fontWeight="bold"
         >
           {label}
+        </Text>
+        {/* Back face: rotated 180° on Y so it reads correctly, not mirrored,
+            when the chip's own rotation brings this side toward the camera. */}
+        <Text
+          position={[0, 0, -0.11]}
+          rotation={[0, Math.PI, 0]}
+          fontSize={0.2}
+          color="#ffffff"
+          anchorX="center"
+          anchorY="middle"
+          letterSpacing={0.02}
+          fontWeight="bold"
+          maxWidth={1.55}
+        >
+          {backLabel}
         </Text>
       </group>
     </Float>

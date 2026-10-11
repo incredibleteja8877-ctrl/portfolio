@@ -314,6 +314,24 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
+.project-screenshots.grid-screens {
+  background: var(--bg-alt);
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 18px 10px 4px;
+}
+
+.project-screenshots.grid-screens img {
+  width: 220px;
+  height: 155px;
+  object-fit: contain;
+  object-position: top center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .project-tag-row {
   display: flex;
   align-items: center;
@@ -529,6 +547,16 @@
   .project-screenshots.phone-screens img {
     width: 92px;
     height: 180px;
+  }
+
+  .project-screenshots.grid-screens {
+    margin: 0 0 18px;
+    padding: 14px 10px 4px;
+  }
+
+  .project-screenshots.grid-screens img {
+    width: 150px;
+    height: 106px;
   }
 
   .section h2 {

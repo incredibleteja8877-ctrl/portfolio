@@ -47,9 +47,17 @@ const projects = [
       link: 'https://github.com/incredibleteja8877-ctrl/taskflow/actions',
       alt: 'Analyze and Test status',
     },
+    screenshotStyle: 'grid',
     screenshots: [
-      { src: '/screenshots/taskflow-dashboard.jpg', alt: 'TaskFlow home dashboard showing task status summary and assigned tasks' },
-      { src: '/screenshots/taskflow-project.jpg', alt: 'TaskFlow project detail screen with task list, status and priority chips' },
+      { src: '/screenshots/taskflow-login.jpg', alt: 'TaskFlow login screen' },
+      { src: '/screenshots/taskflow-register.jpg', alt: 'TaskFlow create account screen' },
+      { src: '/screenshots/taskflow-home2.jpg', alt: 'TaskFlow home dashboard showing task status summary and assigned tasks' },
+      { src: '/screenshots/taskflow-projectslist.jpg', alt: 'TaskFlow projects list' },
+      { src: '/screenshots/taskflow-projectdetail2.jpg', alt: 'TaskFlow project detail screen with task list, status and priority chips' },
+      { src: '/screenshots/taskflow-taskslist.jpg', alt: 'TaskFlow org-wide tasks list' },
+      { src: '/screenshots/taskflow-filters.jpg', alt: 'TaskFlow task filter sheet with status, priority, assignee and due date filters' },
+      { src: '/screenshots/taskflow-newtask.jpg', alt: 'TaskFlow new task form' },
+      { src: '/screenshots/taskflow-profile2.jpg', alt: 'TaskFlow profile screen with developer tools for simulating failures' },
     ],
   },
   {
@@ -86,7 +94,7 @@ function Projects() {
         {projects.map((project) => (
           <div className="project-card" key={project.name}>
             {project.screenshots && (
-              <div className={`project-screenshots${project.screenshotStyle === 'phone' ? ' phone-screens' : ''}`}>
+              <div className={`project-screenshots${project.screenshotStyle ? ` ${project.screenshotStyle}-screens` : ''}`}>
                 {project.screenshots.map((shot) => (
                   <img key={shot.src} src={shot.src} alt={shot.alt} loading="lazy" />
                 ))}

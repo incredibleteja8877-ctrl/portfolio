@@ -35,6 +35,10 @@ const projects = [
       link: 'https://github.com/incredibleteja8877-ctrl/taskflow/actions',
       alt: 'Analyze and Test status',
     },
+    screenshots: [
+      { src: '/screenshots/taskflow-dashboard.jpg', alt: 'TaskFlow home dashboard showing task status summary and assigned tasks' },
+      { src: '/screenshots/taskflow-project.jpg', alt: 'TaskFlow project detail screen with task list, status and priority chips' },
+    ],
   },
   {
     name: 'SSD Yogashala & Kalakshetra',
@@ -56,6 +60,9 @@ const projects = [
       link: 'https://github.com/incredibleteja8877-ctrl/Freelance/actions',
       alt: 'Build, Test, and Deploy status',
     },
+    screenshots: [
+      { src: '/screenshots/yogashala-home.jpg', alt: 'SSD Yogashala and Kalakshetra homepage, live site' },
+    ],
   },
 ]
 
@@ -66,6 +73,13 @@ function Projects() {
       <div className="projects-list">
         {projects.map((project) => (
           <div className="project-card" key={project.name}>
+            {project.screenshots && (
+              <div className="project-screenshots">
+                {project.screenshots.map((shot) => (
+                  <img key={shot.src} src={shot.src} alt={shot.alt} loading="lazy" />
+                ))}
+              </div>
+            )}
             <div className="project-tag-row">
               <p className="project-tag">{project.tag}</p>
               {project.badge && (

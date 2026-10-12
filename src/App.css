@@ -27,7 +27,11 @@
 }
 
 .navbar-brand-accent {
-  color: var(--accent-light);
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent) 60%, var(--accent-dark) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar-links {
